@@ -1,0 +1,330 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+#rnbo-root {
+    height: 100vh;
+    width: 100vw;
+}
+#background {
+    position: absolute;
+    z-index: -1;
+}
+
+h2, em {
+    width: 100%;
+}
+
+#rnbo-root {
+    margin: auto;
+    max-width: 540px;
+}
+
+#rnbo-clickable-keyboard {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#rnbo-clickable-keyboard > div {
+    margin: 2px;
+    border: solid black 1px;
+    min-height: 50px;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#rnbo-clickable-keyboard > div.clicked {
+    background: #222222;
+    color: #dddddd;
+}
+
+#rnbo-parameter-sliders {
+    display: flex;
+    flex-direction: column;
+}
+
+#rnbo-parameter-sliders > div {
+    display: flex;
+}
+
+#rnbo-parameter-sliders > div > input:first-of-type {
+    flex-grow: 1;
+}
+input[type="range"] {
+    appearance: none; /* Modern browsers */
+    -webkit-appearance: none; /* WebKit browsers */
+    -moz-appearance: none; /* Firefox */
+    width: 100%;
+    height: 10px;
+    border-radius: 5px;
+    background: #ddd;
+    outline: none;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+}
+
+input[type="range"]:hover {
+    opacity: 1;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #4caf50;
+    cursor: pointer;
+}
+
+input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #4caf50;
+    cursor: pointer;
+}
+#rnbo-clickable-keyboard > div {
+    margin: 5px;
+    border: none;
+    min-height: 50px;
+    min-width: 60px;
+    background: #4caf50;
+    color: white;
+    font-size: 1rem;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+#rnbo-clickable-keyboard > div:hover {
+    background: #45a049;
+    transform: scale(1.1);
+}
+
+#rnbo-clickable-keyboard > div.clicked {
+    background: #2e7d32;
+    transform: scale(1.2);
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+}
+
+#rnbo-root {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 80%;
+}
+#rnbo-parameter-sliders > div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#rnbo-parameter-sliders > div > label {
+    flex: 1;
+    text-align: right;
+    margin-right: 10px;
+}
+
+#rnbo-parameter-sliders > div > input[type="text"] {
+    width: 60px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    margin-left: 10px;
+}
+@keyframes colorPulse {
+    0% { filter: hue-rotate(0deg); }
+    50% { filter: hue-rotate(180deg); }
+    100% { filter: hue-rotate(360deg); }
+}
+
+body {
+    animation: colorPulse 10s infinite;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+h1, h2 {
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: 400;
+}
+#rnbo-clickable-keyboard > div {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+    }
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+    }
+}
+
+#rnbo-clickable-keyboard > div.clicked {
+    animation: none; /* Disable pulse when clicked */
+    transform: scale(1.2);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 1);
+}
+.particle {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    pointer-events: none;
+    animation: float 10s linear infinite;
+}
+
+@keyframes float {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-100vh);
+    }
+}
+#rnbo-clickable-keyboard > div.ripple {
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.8);
+    animation: ripple-effect 0.5s ease-out;
+}
+
+@keyframes ripple-effect {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+#rnbo-clickable-keyboard > div.ripple {
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.8);
+    animation: ripple-effect 0.5s ease-out;
+}
+
+@keyframes ripple-effect {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+body {
+    font-family: 'Orbitron', sans-serif; /* Add a futuristic font */
+}
+
+h1, h2 {
+    color: #f0f0f0;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+#visualizer {
+    display: block;
+    transition: all 0.3s ease; /* Smooth toggle transition */
+}
+#control-panel {
+    margin-top: 20px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+#control-panel label {
+    font-size: 0.9rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+#visualizer {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 25%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.4);
+    gap: 2px;
+}
+
+.bar {
+    flex: 1;
+    background-color: rgba(255, 255, 255, 0.8);
+    transition: height 0.1s ease-in-out, background-color 0.1s ease-in-out;
+}
+
+#instruction-panel {
+    position: absolute;
+    top: 20%; /* Adjust to position vertically */
+    left: 20px; /* Move it to the left */
+    background: rgba(0, 0, 0, 0.8);
+    color: #f0c419;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    font-family: 'Arial', sans-serif;
+    font-size: 1rem;
+}
+
+#instruction-panel h2 {
+    margin: 0 0 10px 0;
+    font-size: 1.5rem;
+    text-align: center;
+    color: #4caf50;
+    text-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
+}
+
+#instruction-panel p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin: 0;
+}
+#credit-box {
+    position: absolute;
+    bottom: 90px; /* Position it at the bottom */
+    left: 20px; /* Align it to the left corner */
+    background: rgba(0, 0, 0, 0.8);
+    color: #ffffff;
+    padding: 10px 15px;
+    border-radius: 10px;
+    font-family: 'Arial', sans-serif;
+    font-size: 0.9rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
